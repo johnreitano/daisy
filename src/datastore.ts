@@ -25,12 +25,12 @@ export class DatastoreClient {
     try {
       let entityKey;
       
+      const keyValue = isNaN(Number(key)) ? key : parseInt(key);
       if (parent) {
         const parentKeyValue = isNaN(Number(parent)) ? parent : parseInt(parent);
-        const keyValue = isNaN(Number(key)) ? key : parseInt(key);
         entityKey = this.datastore.key([kind, parentKeyValue, kind, keyValue]);
       } else {
-        entityKey = this.datastore.key([kind, isNaN(Number(key)) ? key : parseInt(key)]);
+        entityKey = this.datastore.key([kind, keyValue]);
       }
 
       const [entity] = await this.datastore.get(entityKey);
