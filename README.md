@@ -8,6 +8,7 @@ An MCP (Model Context Protocol) server for Google Cloud Datastore that provides 
 - **Get Entity**: Retrieve a specific entity by key
 - **Query Entities**: Basic querying with pagination
 - **Filter Entities**: Simple equality filtering on any field (including key fields)
+- **Count Entities**: Count entities in a kind with optional filtering
 
 ## Setup
 
@@ -55,6 +56,12 @@ Filters entities by field equality.
 - `value`: Value to match exactly
 - `limit`: Maximum results (default: 100)
 
+### `datastore_count`
+Counts entities in a kind with optional filtering.
+- `kind`: Entity kind to count
+- `field`: Field name to filter on (optional)
+- `value`: Value to match exactly (required if field is provided)
+
 ## Examples
 
 ```json
@@ -72,4 +79,10 @@ Filters entities by field equality.
 
 // Filter by key
 {"name": "datastore_filter", "arguments": {"kind": "User", "field": "__key__", "value": "12345"}}
+
+// Count all entities
+{"name": "datastore_count", "arguments": {"kind": "User"}}
+
+// Count with filter
+{"name": "datastore_count", "arguments": {"kind": "User", "field": "status", "value": "active"}}
 ```
