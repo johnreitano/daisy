@@ -2,6 +2,10 @@
 
 An MCP (Model Context Protocol) server for Google Cloud Datastore that provides simple query capabilities.
 
+<a href="https://glama.ai/mcp/servers/@johnreitano/daisy">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@johnreitano/daisy/badge" alt="Datastore Server MCP server" />
+</a>
+
 ## Features
 
 - **List Kinds**: Get all available entity kinds (tables) in your Datastore
