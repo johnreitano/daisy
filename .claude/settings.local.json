@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(mkdir:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm start)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "mcp__datastore-server__datastore_filter",
+      "mcp__datastore-server__datastore_get",
+      "WebFetch(domain:friendly-remodeling.com)",
+      "mcp__datastore-server__datastore_query",
+      "Bash(node:*)",
+      "mcp__datastore-server__datastore_count",
+      "Bash(gh repo create:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": []
+  }
+}
